@@ -4,17 +4,28 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Card from './components/Cards'
+import data from './data'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const cards=data.map(item=>{
+    return(
+      <Card
+        key={item.id}
+        {...item}
+        />
+    ) 
+  })
 
   return (
     <div className="App">
       <Navbar/>
       <Hero/>
-      <Card/>
+      <section className='card-list'>
+      {cards}
+      </section>
+      
     </div>
   )
 }
 
-export default App
+
