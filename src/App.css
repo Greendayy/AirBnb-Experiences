@@ -30,3 +30,7 @@ nav{
 .hero-header{
   font-size: 32px;
 }
+
+.card-list{
+  display: flex;
+}
